@@ -20,12 +20,14 @@ It ensures that deleted or modified data can be restored to the previous state w
 - **AWS Backup Vault**
 - **AWS Backup Plan** (Scheduled backups + PITR enabled)
 - **Lambda Function**: Change Monitor (triggered on DynamoDB Stream events)
-![Architecture Diagram](Disaster-Recovery-AWS/lambda-architecture.jpg)
+![lambda-architecture](Disaster-Recovery-AWS/lambda-architecture.png)
 - **IAM Roles**:
   - Lambda execution role (permissions: dynamodb:DescribeStream, GetRecords, StartRestoreJob)
+  - ![lambda-role-inline-policy](Disaster-Recovery-AWS/lambda-role-inline-policy.png)
   - AWS Backup restore role (PassRole permissions)
+  - ![aws-bavkup-inline-policy](Disaster-Recovery-AWS/aws-bavkup-inline-policy-02.png)
 - **CloudWatch Logs** (monitor Lambda execution and restore activity)
-![Architecture Diagram](Disaster-Recovery-AWS/cli-tail-logs-dbstream.png.jpg)
+![tail-logs-dbstream](Disaster-Recovery-AWS/cli-tail-logs-dbstream.png.png)
 
 ---
 
@@ -56,6 +58,13 @@ This diagram shows the flow of DynamoDB changes, Lambda triggers, and AWS Backup
 
 This diagram shows the flow of AWS Lambda and AWS Backup roles and policies assigned to them:
 
-![Architecture Diagram](Disaster-Recovery-AWS/Roles.jpg)
+![Roles](Disaster-Recovery-AWS/Roles.jpg)
+
+## Restored Database Jobs
+
+![restored-database-with-timestamp](Disaster-Recovery-AWS/restored-database-with-timestamp.png)
+
+![restore-job-success](Disaster-Recovery-AWS//restore-job-success.png)
+
 
 
