@@ -27,7 +27,7 @@ It ensures that deleted or modified data can be restored to the previous state w
   - AWS Backup restore role (PassRole permissions)
   - ![aws-bavkup-inline-policy](Disaster-Recovery-AWS/aws-bavkup-inline-policy-02.png)
 - **CloudWatch Logs** (monitor Lambda execution and restore activity)
-![tail-logs-dbstream](Disaster-Recovery-AWS/cli-tail-logs-dbstream.png.png)
+![tail-logs-dbstream](Disaster-Recovery-AWS/cli-tail-logs-dbstream.png)
 
 ---
 
