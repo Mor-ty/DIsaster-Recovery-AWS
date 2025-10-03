@@ -1,0 +1,5 @@
+{
+  "SelectionName": "DynamoDB-Table-Selection",
+  "IamRoleArn": "arn:aws:iam::649418801828:role/AWS-Backup-Rrestore-Role",
+  "Resources": ["arn:aws:dynamodb:us-west-1:649418801828:table/dynamo-demo"]
+}

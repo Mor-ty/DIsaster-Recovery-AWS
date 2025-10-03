@@ -1,0 +1,15 @@
+{
+  "BackupPlanName": "DynamoDB-DR-Plan",
+  "Rules": [
+    {
+      "RuleName": "12hr-backup",
+      "TargetBackupVaultName": "DynamoDB-DR-Vault",
+      "ScheduleExpression": "cron(0 */12 * * ? *)",
+      "StartWindowMinutes": 60,
+      "CompletionWindowMinutes": 120,
+      "Lifecycle": {
+        "DeleteAfterDays": 35
+      }
+    }
+  ]
+}
