@@ -20,7 +20,7 @@ It ensures that deleted or modified data can be restored to the previous state w
 - **AWS Backup Vault**
 - **AWS Backup Plan** (Scheduled backups + PITR enabled)
 - **Lambda Function**: Change Monitor (triggered on DynamoDB Stream events)
-![Architecture Diagram](Disaster-Recovery-AWS/Disaster_recovery_architecture_diagram.jpg)
+![Architecture Diagram](Disaster-Recovery-AWS/lambda-architecture.jpg)
 - **IAM Roles**:
   - Lambda execution role (permissions: dynamodb:DescribeStream, GetRecords, StartRestoreJob)
   - AWS Backup restore role (PassRole permissions)
